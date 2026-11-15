@@ -1,0 +1,13 @@
+{
+  "name": "meeting-action-tracker",
+  "private": true,
+  "workspaces": ["server", "web"],
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "dev": "npm run dev -w server & npm run dev -w web",
+    "build": "npm run build -w web && npm run build -w server",
+    "test": "npm test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web",
+    "start": "npm start -w server"
+  }
+}
